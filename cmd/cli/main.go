@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"os"
+	"log"
 
 	"github.com/danawoodman/project-name/internal"
 )
 
 func main() {
 	if err := internal.NewCmd(); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		log.Fatal("cli failed to start:", err)
 	}
 }
